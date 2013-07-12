@@ -1,10 +1,10 @@
 get '/' do
-	# @games = Game.all
+	# @games = Game.all	
 	if session[:auth] != nil
 		@logged_in = true
+		@user = User.find(session[:auth])
 	end
-	@user = User.find(session[:auth])
-	@game = 
+	
 
 	erb :index
 end
