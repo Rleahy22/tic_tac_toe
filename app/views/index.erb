@@ -1,8 +1,12 @@
-<div class="login">
-  <form action="/user" method="post">
-    <input type="text" name="name" placeholder="Enter your username">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit" value="Login">
-  </form>
-  <a href="/signup">Don't have an account? THEN GET ONE!!</a>
+<div class="game">
+  <h1><a href="#">Create Game</a></h1>
+
+  <h2>Open Games</h2>
+  <% @games.each do |game| %>
+    <% if game.users.count < 2 %>
+    <h4><a href="/game/<% game.id %>">Game <%= game.id %></a></h4>
+    <% end %>    
+
+  <% end %>
+
 </div>
