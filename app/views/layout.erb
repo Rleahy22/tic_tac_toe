@@ -24,8 +24,8 @@
     <p>Welcome, <%= @user.name %></p>
   <% else %>
   <form action="/user" method="post">
-    <input type="text" name="name" placeholder="Enter your username">
-    <input type="password" name="password" placeholder="password">
+    <input type="text" name="user[name]" placeholder="Enter your username">
+    <input type="password" name="user[password]" placeholder="password">
     <input type="submit" value="Login">
   </form>
   <a href="/signup">Don't have an account? THEN GET ONE!!</a>

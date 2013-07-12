@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	# include BCrypt
+	include BCrypt
 
 	validates :name, :uniqueness => true 
 	validates :name, :presence => true
