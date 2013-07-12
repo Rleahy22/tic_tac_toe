@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
 	has_many :wins
 	has_many :won_games, :through => :wins, :source => :game
 	has_many :moves
-	has_many :played_games, :through => :moves, :source => :game
+	has_many :players
+	has_many :played_games, :through => :players, :source => :game
 
 
 	def password
